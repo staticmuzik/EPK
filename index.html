@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Static Text Glitch</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .static-mask {
+      width: 50vw;
+      max-width: 800px;
+      aspect-ratio: 4 / 1;
+      background-image: url('textrurue.gif');
+      background-size: cover;
+      background-repeat: repeat;
+      -webkit-mask-image: url('static transparent.png');
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-image: url('static transparent.png');
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+
+    @media (max-width: 600px) {
+      .static-mask {
+        width: 80vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="static-mask"></div>
+</body>
+</html>
